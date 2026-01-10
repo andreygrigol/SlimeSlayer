@@ -1,0 +1,17 @@
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/bin/Debug/2D RPG.deps.json
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/bin/Debug/2D RPG.runtimeconfig.json
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/bin/Debug/2D RPG.dll
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/bin/Debug/2D RPG.pdb
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/bin/Debug/GodotSharp.dll
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/obj/Debug/2D RPG.csproj.AssemblyReference.cache
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/obj/Debug/2D RPG.GeneratedMSBuildEditorConfig.editorconfig
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/obj/Debug/2D RPG.AssemblyInfoInputs.cache
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/obj/Debug/2D RPG.AssemblyInfo.cs
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/obj/Debug/2D RPG.csproj.CoreCompileInputs.cache
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/obj/Debug/2D RPG.csproj.Up2Date
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/obj/Debug/2D RPG.dll
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/obj/Debug/refint/2D RPG.dll
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/obj/Debug/2D RPG.pdb
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/obj/Debug/2D RPG.genruntimeconfig.cache
+/home/andrey/Documents/Projects/2d-rpg/.godot/mono/temp/obj/Debug/ref/2D RPG.dll
