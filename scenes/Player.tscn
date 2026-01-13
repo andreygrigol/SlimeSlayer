@@ -108,11 +108,14 @@ script = ExtResource("1_g2els")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.5, -7)
 texture = ExtResource("1_3vyb7")
+offset = Vector2(0, -15)
 hframes = 6
 vframes = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(0, -15)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="Animation" type="AnimationPlayer" parent="."]

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dsqoyoyvb2j0q" path="res://scenes/Player.tscn" id="2_xyt4e"]
 
 [node name="GameLevel" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Terrain" parent="." instance=ExtResource("1_qx85r")]
 
