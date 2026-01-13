@@ -6,12 +6,12 @@ public partial class Player : CharacterBody2D
     [Export] public float _speed = 100.0f;
     [Export] public float _friction = 0.2f;
     [Export] public float _acceleration = 0.2f;
-	[Export] private AnimationPlayer _animationPlayer;
-	[Export] private Sprite2D _sprite;
+
+	private AnimationPlayer _animationPlayer;
+	private Sprite2D _sprite;
 
     private void GetInput()
     {
-
         Vector2 inputDirection = Input.GetVector(
             "ui_left",
             "ui_right",
@@ -39,7 +39,6 @@ public partial class Player : CharacterBody2D
 
 	private void UpdateAnimation()
 	{
-
 		_sprite = GetNode<Sprite2D>("Sprite2D");
 		_animationPlayer = GetNode<AnimationPlayer>("Animation");
 
@@ -72,7 +71,6 @@ public partial class Player : CharacterBody2D
 		if (_animationPlayer.CurrentAnimation != name)
 			_animationPlayer.Play(name);
 	}
-
 
 
     public override void _PhysicsProcess(double delta)
