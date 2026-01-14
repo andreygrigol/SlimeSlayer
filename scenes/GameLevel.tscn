@@ -7,5 +7,6 @@
 y_sort_enabled = true
 
 [node name="Terrain" parent="." instance=ExtResource("1_qx85r")]
+position = Vector2(-11, -106)
 
 [node name="Player" parent="." instance=ExtResource("2_xyt4e")]

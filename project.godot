@@ -28,6 +28,11 @@ window/updates_per_second=240
 
 project/assembly_name="2D RPG"
 
+[editor]
+
+naming/scene_name_casing=1
+naming/script_name_casing=1
+
 [input]
 
 ui_left={
