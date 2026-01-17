@@ -6,6 +6,7 @@ public partial class Player : CharacterBody2D
     [Export] public float _speed = 100.0f;
     [Export] public float _friction = 0.2f;
     [Export] public float _acceleration = 0.2f;
+	[Export] public float _health = 100.0f;
 
 	private AnimationPlayer _animationPlayer;
 	private Sprite2D _sprite;
