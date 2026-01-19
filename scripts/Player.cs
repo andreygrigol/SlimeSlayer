@@ -1,15 +1,23 @@
+using System.Runtime.CompilerServices;
 using Godot;
 
 public partial class Player : CharacterBody2D
 {
-    [ExportCategory("Variables")]
-    [Export] public float _speed = 100.0f;
+	[Export] public float _speed = 100f;
     [Export] public float _friction = 0.2f;
     [Export] public float _acceleration = 0.2f;
 	[Export] public float _health = 100.0f;
 
+	private bool isAttacking = false;
+
 	private AnimationPlayer _animationPlayer;
 	private Sprite2D _sprite;
+
+    public override void _Ready()
+    {
+		_sprite = GetNode<Sprite2D>("Sprite2D");
+		_animationPlayer = GetNode<AnimationPlayer>("Animation");
+    }
 
     private void GetInput()
     {
@@ -40,43 +48,59 @@ public partial class Player : CharacterBody2D
 
 	private void UpdateAnimation()
 	{
-		_sprite = GetNode<Sprite2D>("Sprite2D");
-		_animationPlayer = GetNode<AnimationPlayer>("Animation");
-
 		if (_sprite == null || _animationPlayer == null)
 			return;
 
 		Vector2 input = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
 
+		if (isAttacking)
+			return;
+
 		if (input.Y < 0)
 		{
-			PlayAnimation("Running_up");
+			_animationPlayer.Play("Running_up");
 		}
 		else if (input.Y > 0)
 		{
-			PlayAnimation("Running_down");
+			_animationPlayer.Play("Running_down");
 		}
 		else if (input.X != 0)
 		{
 			_sprite.FlipH = input.X < 0;
-			PlayAnimation("Running");
+			_animationPlayer.Play("Running");
 		}
 		else
 		{
-			PlayAnimation("Idle");
+			_animationPlayer.Play("Idle");
 		}
+
+		if (Input.IsActionJustPressed("attack"))
+		{
+			_animationPlayer.Play("Attack_down");
+		}
+		
 	}
 
-	private void PlayAnimation(string name)
+	async void Attack()
 	{
-		if (_animationPlayer.CurrentAnimation != name)
-			_animationPlayer.Play(name);
-	}
+		if(isAttacking)
+			return;			
 
+		isAttacking = true;
+		_animationPlayer.Play("Attack_down");
+		
+		await ToSignal(_animationPlayer, "animation_finished");
+
+		isAttacking = false;
+	}
 
     public override void _PhysicsProcess(double delta)
     {
         GetInput();
+		if (Input.IsActionJustPressed("attack"))
+		{
+			Attack();
+		}
 		UpdateAnimation();
         MoveAndSlide();
     }

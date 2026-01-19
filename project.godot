@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Slime Slayer"
-run/main_scene="uid://dsqoyoyvb2j0q"
+run/main_scene="uid://db4n0m0w0c2f2"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 
 [display]
@@ -22,7 +22,7 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/name="2D RPG"
-window/updates_per_second=240
+window/updates_per_second=60
 
 [dotnet]
 
